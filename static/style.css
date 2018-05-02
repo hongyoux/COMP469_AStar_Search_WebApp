@@ -1,3 +1,6 @@
 canvas#mainCanvas {
 	outline:1px solid #000000;
 }
+.linebreak {
+	height: 20px;
+}

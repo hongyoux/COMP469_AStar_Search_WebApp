@@ -26,18 +26,29 @@
                 <canvas id="mainCanvas" width="600" height="600"></canvas>
             </div>
             <div class="col-sm-4">
-                <div id="spawnGoal">
+                <!-- GROUPED ROW 1 START -->
+                <div class="row">
+                    <h4>Choose a Goal</h4>
+                </div>
+                <div class="row">
                     <div class="btn-group-toggle" data-toggle="buttons">
                       <label id="pickGoalBtn" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Click on grid to place Goal">
                         <input id="pickGoal" type="checkbox" autocomplete="off">Assign Goal
                       </label>
                     </div>
                 </div>
-                <div id="spawnBlockers">
+                <!-- GROUPED ROW 1 END -->
+
+                <div class="linebreak row"></div>
+
+                <!-- GROUPED ROW 2 START -->
+                <div class="row">
                     <h4>Spawn Randomized Terrain</h4>
+                </div>
+                <div class="row">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-sm">Spawn Prob</span>
+                            <span class="input-group-text">Spawn Prob</span>
                         </div>
                         <input id="spawnProb" type="text" class="form-control" placeholder=".25">
                         <div class="input-group-append">
@@ -45,9 +56,29 @@
                         </div>
                     </div>
                 </div>
-                <div id="infoWindow">
-                    <p>Current Robot: <span id="currRobotText" />No Robot Placed.</p>
+                <!-- GROUPED ROW 2 END-->
+
+                <div class="linebreak row"></div>
+
+                <!-- GROUPED ROW 3 START -->
+                <div class="row">
+                    <h4>Run A* Search</h4>
                 </div>
+                <div class="row">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Time Step (ms)</span>
+                        </div>
+                        <input id="timeStepRate" type="text" class="form-control" placeholder="250">
+                        <div class="input-group-append">
+                            <button id="playButton" class="btn btn-outline-primary" type="button">Start</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button type="button" id="singleStep" class="btn btn-outline-primary btn-lg">Step Once</button>
+                </div>
+                <!-- GROUPED ROW 3 END-->
             </div>
         </div>
     </div>

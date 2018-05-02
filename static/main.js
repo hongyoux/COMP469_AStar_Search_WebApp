@@ -30,15 +30,18 @@ $( document ).ready(function() {
     });
 
     $("#mainCanvas").click(function(event){
-    	var xLoc = event.pageX - $(this).offset().left;
-    	var yLoc = event.pageY - $(this).offset().top;
-
-    	var hoveredNode = grid.FromPixelToNode(xLoc, yLoc);
-    	if (hoveredNode != grid.robot && hoveredNode.blocked == false)
+    	if ($("#pickGoal").is(':checked'))
     	{
-    		grid.SetGoal(hoveredNode);
+	    	var xLoc = event.pageX - $(this).offset().left;
+	    	var yLoc = event.pageY - $(this).offset().top;
+
+	    	var hoveredNode = grid.FromPixelToNode(xLoc, yLoc);
+	    	if (hoveredNode != grid.robot && hoveredNode.blocked == false)
+	    	{
+	    		grid.SetGoal(hoveredNode);
+	    	}
+	    	$("#pickGoalBtn").click();
     	}
-    	$("#pickGoalBtn").click();
     });
 
     $("#randomBlockers").click(function(event) {
