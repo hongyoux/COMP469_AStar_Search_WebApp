@@ -39,7 +39,6 @@ class Grid
 		this.path = [];
 		this.drawnPath = [];
 		this.timeout = 50;
-		this.timeoutFunc = null;
 	}
 	MakeNodes()
 	{

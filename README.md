@@ -14,6 +14,6 @@ A* Search demo webapp that has interactivity.
 
 - The red square is the robot's current location. The green is the location it is heading to.
 
-- Step functionality where it moves one square at a time or time-step mode where it plays a step every x milliseconds.
+- Ability to run the A* search for given pair of robot to endpoint; or to switch on hover mode where the robot will chase the mouse's current location whenever possible.
 
 - Clicking the "Assign Goal" button allows users to change the goal by letting users hover and click on the next location on the grid. Goal is not allowed to be set on current robot's location or on a blocked node.
